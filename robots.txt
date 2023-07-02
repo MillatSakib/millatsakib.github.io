@@ -1,0 +1,9 @@
+User-agent: *
+Disallow: /login.html
+Disallow: /index.html
+Allow: /about_us.html
+Allow: /contact.html
+Allow: /feedback.html
+Allow: /services.html
+Allow: /
+Sitemap: https://millatsakib.github.io/sitemap.xml
