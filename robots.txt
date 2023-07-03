@@ -1,5 +1,6 @@
 User-agent: *
 Disallow: /login.html
+Disallow: /IoT_Project/Control_Panel/
 Disallow: /index.html
 Allow: /about_us.html
 Allow: /contact.html
