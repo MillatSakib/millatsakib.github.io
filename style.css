@@ -1,3 +1,55 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content:center;
+}
+
+.green-eye {
+  color: green;
+}
+.flexboxout {
+  display: flex;
+  align-items: center; /* Align items vertically */
+  padding-right: 50px;
+  padding-left: 15px;
+}
+
+.flexboxin {
+  margin-left: 20px; /* Adjust margin as needed */
+  flex-grow: 1; /* Allow content to grow and take remaining space */
+}
+
+footer{
+  position: relative;
+  grid-column: 1/-1;
+  width: auto;
+  height: auto;
+  top: 250px;
+  text-align:center;
+  padding: 3px;
+  background-color: rgb(37, 37, 37);
+  color:white;
+}
+
+.foota:link {
+  color: rgb(255, 133, 133);
+}
+
+/* visited link */
+.foota:visited {
+  color: rgb(153, 255, 153);
+}
+
+/* mouse over link */
+.foota:hover {
+  color: rgb(255, 255, 255);
+}
+
+/* selected link */
+.foota:active {
+  color: rgb(95, 95, 255);
+}
+
 
 body {
     position: relative;
