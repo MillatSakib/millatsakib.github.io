@@ -1,0 +1,122 @@
+
+body {
+    position: relative;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #b6aeff;
+    color: #333;
+    
+  }
+  
+  body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    opacity: 0.09; /* Adjust the opacity value as desired */
+    z-index: -1;
+  }
+  
+  #pageContent {
+    display: block;
+  }
+
+  header {
+    background-color: #333;
+    color: #fff;
+    padding: 0px;
+    text-align: center;
+    display: flex; /* Add this line to enable flexbox */
+    justify-content: space-between; /* Align items horizontally */
+    align-items: center; /* Align items vertically */
+  }
+  
+  
+ 
+
+  footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+  }
+  .chakac{
+    color: aliceblue;
+}
+.chakac:hover{
+    color: rgb(144, 255, 227);
+}
+
+.chaka{
+    list-style: none;
+    background-color: rgb(48, 48, 48);
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: auto;
+    font-size: 18px;
+    }
+    .chaka ul{
+        text-align: center;
+        padding: 15px 30px;
+        }
+        .chaka ul li{
+            list-style: none;
+            display: inline-flex;
+            padding: 5px 30px;
+            color: wheat;
+        
+        }
+        .navbar{
+            list-style: none;
+            background-color: rgb(60, 230, 37);
+            margin: 0;
+            padding: 0;
+            width: auto;
+            height: auto;
+            }
+            .navbar ul{
+            text-align: center;
+            padding: 5px 20px;
+            }
+            .navbar ul li{
+            list-style: none;
+            display: inline-block;
+            padding: 10px 30px;
+            color: wheat;
+            
+            }
+            .navbar ol li:hover {
+                background-color: darkorange;
+                translate:-10px -10px;
+                cursor: pointer;
+            }
+
+
+            /*Input start*/
+            input {
+                border: 4px solid #b6fc66; /* Set the border style */
+                border-color: rgb(227, 255, 11); /* Set the border color */
+                border-radius: 10px;
+                font-size: 16px;
+                padding: 10px;
+              }
+              input:hover {
+                border-color: rgb(90, 24, 151); /* Set the desired hover border color */
+              }
+              
+              input:focus {
+                outline: none; /* Remove the default focus outline */
+                border-color: rgb(0, 224, 30); /* Set the desired focus border color */
+              }
+              /*Input END*/
+              
+              
+              
