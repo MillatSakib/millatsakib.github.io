@@ -1,5 +1,59 @@
+/*.mybutton{
+  padding: 30px;
+  background-color: #00CF5D;
+  color: #ffffff;
+  text-decoration: none;
+}
+*/
+/* Apply styles for the link button */
+.mybutton {
+  display: inline-block;
+  padding: 15px 30px;
+  background-color: #007bff; /* Set the background color */
+  color: #ffffff; /* Set the text color */
+  text-decoration: none; /* Remove underline */
+  border: none; /* Remove border */
+  border-radius: 5px; /* Add border radius for rounded corners */
+}
+
+/* Apply styles when the link button is hovered */
+.mybutton:hover {
+  background-color: #0056b3; /* Change the background color on hover */
+}
+
+/* Style for the list container */
+.list-container {
+  display: flex; /* Use flexbox to display lists side by side */
+}
+
+/* Style for the list items */
+.side-by-side {
+  color: #00CF5D;;
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+}
+
+.side-by-side li {
+  padding: 8px; /* Add some padding to separate list items */
+}
+
+
+/* Add the CSS for sticky-top navbar */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  transition: top 0.4s; /* Add a smooth transition effect for hiding/showing the navbar */
+}
+
+/* Add some padding to the body so that content doesn't go behind the navbar */
+body {
+  padding-top: 70px;
+}
+
 .about-me{
-  margin-left: 70px;
+  margin-left: 100px;
 }
 /* Add the following CSS styles */
 .project-container {
@@ -79,7 +133,7 @@
 }
 
 .green-eye {
-  color: green;
+  color: #00CF5D;;
 }
 .bod{
   padding: 20px;
@@ -89,18 +143,10 @@ body {
     position: relative;
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    background-color: #222c38;;
+    background-color: #212c3b;;
     color: #ffffff;
   }
-  
-  body::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-  }
+
   
   #pageContent {
     display: block;
