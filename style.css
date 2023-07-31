@@ -1,3 +1,51 @@
+.about-me{
+  margin-left: 70px;
+}
+/* Add the following CSS styles */
+.project-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; /* Adjust this property to align the cards */
+}
+
+.project {
+  width: calc(50% - 10px); /* Adjust the width of each card and add some margin between them */
+  margin-bottom: 20px;
+}
+
+/* Add the following CSS styles for the custom-card class */
+.custom-card {
+  transition: box-shadow 0.3s, transform 0.3s; /* Add transition effect for box-shadow and transform */
+}
+
+.custom-card:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Add a shadow effect when hovering */
+  transform: scale(1.05); /* Zoom in the card a little when hovering */
+}
+.bcurve{
+  border-radius: 15px;
+}
+.bordered-text {
+  border: 2px solid rgb(5, 236, 63);
+  padding: 5px; /* Optional: Add padding to create some space between the text and the border */
+  border-radius: 10px;
+  
+} 
+.bordered-text{
+  transition: background-color 0.5s ease;
+}
+.bordered-text:hover {
+  background-color: rgb(5, 236, 63);
+}
+ 
+ /* Custom styles for the selected and unselected tabs */
+ .nav-pills .nav-item .nav-link.active {
+  background-color: rgb(73, 228, 73);
+  color: white;
+}
+.nav-pills .nav-item .nav-link {
+  color: rgb(73, 228, 73);
+}
 .image-container {
   width: 280px;
   height: 185px;
@@ -6,18 +54,20 @@
   justify-content: center;
   align-items: center;
 }
+
+/*ihov means icon hover. I add this for change icon (github and link redirect) on hover*/
 /* Customize the icon color to white */
-a i {
+.ihov {
   color: #ffffff;
 }
 
 /* Add the transition effect */
-a i {
+.ihov {
   transition: color 0.5s ease;
 }
 
 /* Add the hover effect */
-a:hover i {
+.ihov:hover{
   color: #00ff00; /* Green color */
 }
 
@@ -31,18 +81,6 @@ a:hover i {
 .green-eye {
   color: green;
 }
-.flexboxout {
-  display: flex;
-  align-items: center; /* Align items vertically */
-  padding-right: 50px;
-  padding-left: 15px;
-}
-
-.flexboxin {
-  margin-left: 20px; /* Adjust margin as needed */
-  flex-grow: 1; /* Allow content to grow and take remaining space */
-}
-
 .bod{
   padding: 20px;
 }
@@ -51,7 +89,7 @@ body {
     position: relative;
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    background-color: #2b2a2a;
+    background-color: #222c38;;
     color: #ffffff;
   }
   
@@ -62,13 +100,6 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url("background.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    opacity: 0.09; /* Adjust the opacity value as desired */
-    z-index: -1;
   }
   
   #pageContent {

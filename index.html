@@ -23,13 +23,13 @@
       </button>
       <div class="collapse navbar-collapse nav justify-content-center" id="navbarNavAltMarkup">
         <div class="navbar-nav">
-          <a class="nav-item nav-link" href="#about"  title="For go to on Home Page click here.">ABOUT&nbsp;&nbsp;</a>
-          <a class="nav-item nav-link" href="#" title="">SKILL&nbsp;&nbsp;</a>
+          <a class="nav-item nav-link" href="#about">ABOUT&nbsp;&nbsp;</a>
+          <a class="nav-item nav-link" href="#">SKILL&nbsp;&nbsp;</a>
           <a class="nav-item nav-link" href="#" title="">PROJECT&nbsp;&nbsp;</a>
           <a class="nav-item nav-link" href="#" title="">PORTFOLIO&nbsp;&nbsp;</a>
           <a class="nav-item nav-link" href="#" title="">CONTACT&nbsp;&nbsp;</a>
-          <a class="nav-item nav-link" href="#" title="">BLOG&nbsp;&nbsp;&nbsp;</a>
-          <a class="nav-item nav-link" href="#" title="">RESUME</a>
+          <a class="nav-item nav-link" href="#">BLOG&nbsp;&nbsp;&nbsp;</a>
+          <a class="nav-item nav-link resume" href="https://raw.githubusercontent.com/MillatSakib/my-cv/1a0a569f197cb648e2fa086257c58d633c35f021/my-cv.pdf"  title="Download My Resume"><b class="bordered-text" style="color:white; padding:10px">RESUME</b></a>
         </div>
       </div>
     </nav>
@@ -39,11 +39,11 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js" integrity="sha384-Rx+T1VzGupg4BHQYs2gCW9It+akI2MM/mndMCy36UVfodzcJcF0GGLxZIzObiEfa" crossorigin="anonymous"></script>
     <br>
     <div class="bod">
-  <section id="">
-    <h1>Welcome to My Portfolio</h1>
+ <br><div class="about-me"><h5 style="color: #2bf110;"><strong>Hello! I am</strong></h5>
     
-    <p>I am Md. Sohan Millat Sakib</p>
-  </section>
+    <h1 style="font-size: 50px;"><strong>Md. Sohan Millat Sakib</strong></h1>
+  </div>
+
 
 
 
@@ -52,63 +52,122 @@
 
 
   <section id="about">
+    <br><br><br><br>
     <h2>About Me</h2>
     <p>Now I am learning about MERN Stack web development.</p>
   </section>
 
-  <section id="pjects">
+  <section id="pjects" style="margin-top: 50px; padding: 30px;">
     <h2>My Projects</h2>
 
-
-    <div class="card text-center text-white" style="background-color: #3e3e3f;">
+    <div class="card text-center text-white" style="background-color:transparent;">
       <div class="card-header">
-        <ul class="nav nav-pills card-header-pills">
-          <li class="nav-item">
-            <a class="nav-link active" href="#">WEB</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Embedeb System</Embed></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Other</a>
-          </li>
-        </ul>
+          <ul class="nav nav-pills card-header-pills">
+              <li class="nav-item">
+                  <a class="nav-link nav-js active" href="#" data-tab="web"><strong>WEB</strong></a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link nav-js" href="#" data-tab="embeded"><strong>Embeded System</strong> </a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link nav-js" href="#" data-tab="other"><strong> Other</strong> </a>
+              </li>
+          </ul>
       </div>
       <h2 class="card-title">All Projects</h2>
-      <div class="card-body">
-        
-        <div class="project">
-          <h5>Project 1</h5>
-          <div class="card" style="width: 21rem; background-color: #1D293A; color: aliceblue;"><div style="width: 21rem;height: 185px; background-color: #2b3d57;">
-            <img class="card-img-top" src="images/project15.jpg" alt="Card image cap" style="width: 335px;height: 185px;"></div>
-            <div class="card-body">
-              <h5 class="card-title"><strong>WEB FOR A STORE</strong></h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p><hr>
-              <a href="https://github.com/MillatSakib/dokan/" target="_blank" style="margin: 7px;">
-                <i class="fab fa-github fa-lg"></i></a>
-                <a href="https://millatsakib.github.io/dokan/" target="_blank" style="margin: 7px;"><i class="fas fa-external-link-alt fa-lg"></i></a>
-                <p class="card-text text-white"><small>Last updated 3 months ago</small></p>
-                <p class="card-text text-white" style="text-align: left;"><small><small>HTML&nbsp;&nbsp;CSS&nbsp;&nbsp;JAVASCIRPT&nbsp;&nbsp;BOOTSTRAP</small></small></p>
+      <div class="card-body" id="tab-content">
+          <div id="web-tab-content" class="project-container">
+              <!-- Content for the WEB tab -->
+              <div class="project">
+                  <caption>Project 1</caption>
+                  <div class="card custom-card bcurve" style="width: 21rem; background-color: #273b58; color: aliceblue;">
+                      <div class="bcurve" style="width: 20.8rem;height: 185px; background-color: #2b3d57;">
+                          <img class="card-img-top bcurve" src="images/project15.jpg" alt="Card image cap" style="width: 335px;height: 185px;">
+                      </div>
+                      <div class="card-body">
+                          <h5 class="card-title"><strong>WEB FOR A STORE</strong></h5>
+                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                          <hr>
+                          <a class="ihov" href="https://github.com/MillatSakib/dokan/" target="_blank" style="margin: 7px;">
+                              <i class="fab fa-github fa-lg"></i></a>
+                          <a class="ihov" href="https://millatsakib.github.io/dokan/" target="_blank" style="margin: 7px;"><i class="fas fa-external-link-alt fa-lg"></i></a>
+                          <p class="card-text text-white"><small>Last updated 3 months ago</small></p>
+                          <p class="card-text text-white" style="text-align: left;"><small><small>HTML&nbsp;&nbsp;CSS&nbsp;&nbsp;JAVASCRIPT&nbsp;&nbsp;BOOTSTRAP</small></small></p>
+                      </div>
+                  </div>
+
+
+                  <div class="project"></div>
+                    <caption>Project 2</caption>
+                   <div class="card custom-card bcurve" style="width: 21rem;  background-color: #273b58; color: aliceblue;">
+                      <div class="bcurve" style="width: 20.8rem;height: 185px; background-color: #2b3d57;">
+                          <img class="card-img-top bcurve" src="images/project15.jpg" alt="Card image cap" style="width: 335px;height: 185px;">
+                      </div>
+                      <div class="card-body">
+                          <h5 class="card-title"><strong>WEB FOR A STORE</strong></h5>
+                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                          <hr>
+                          <a class="ihov" href="https://github.com/MillatSakib/dokan/" target="_blank" style="margin: 7px;">
+                              <i class="fab fa-github fa-lg"></i></a>
+                          <a class="ihov" href="https://millatsakib.github.io/dokan/" target="_blank" style="margin: 7px;"><i class="fas fa-external-link-alt fa-lg"></i></a>
+                          <p class="card-text text-white"><small>Last updated 3 months ago</small></p>
+                          <p class="card-text text-white" style="text-align: left;"><small><small>HTML&nbsp;&nbsp;CSS&nbsp;&nbsp;JAVASCRIPT&nbsp;&nbsp;BOOTSTRAP</small></small></p>
+                      </div>
+                  </div>
+
+              </div>
+          </div>
+          
+          <div id="embeded-tab-content" style="display: none;">
+              <!-- Content for the Embeded System tab -->
+              <div class="project">
+                <h5>Project 1</h5>
+                <div class="card custom-card bcurve" style="width: 21rem; background-color: #273b58; color: aliceblue;">
+                    <div class="bcurve" style="width: 20.8rem;height: 185px; background-color: #324f77;">
+                        <img class="card-img-top bcurve" src="images/project14.jpg" alt="Card image cap" style="width: 333px;height: 185px;">
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title"><strong>Home Automation</strong></h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <hr>
+                        <a class="ihov" href="https://github.com/MillatSakib/IoT_Project" target="_blank" style="margin: 7px;">
+                            <i class="fab fa-github fa-lg"></i></a>
+                        <a class="ihov" href="https://millatsakib.github.io/IoT_Project/Control_Panel/" target="_blank" style="margin: 7px;"><i class="fas fa-external-link-alt fa-lg"></i></a>
+                        <p class="card-text text-white"><small>Last updated 3 months ago</small></p>
+                        <p class="card-text text-white" style="text-align: left;"><small><small>HTML&nbsp;&nbsp;CSS&nbsp;&nbsp;JAVASCRIPT&nbsp;&nbsp;BOOTSTRAP</small></small></p>
+                    </div>
+                </div>
             </div>
+            custom-card
+              <p>This is the content for the Embeded System tab.</p>
+          </div>
+          <div id="other-tab-content" style="display: none;">
+              <!-- Content for the Other tab -->
+              <div class="project">
+                <h5>Project 1</h5>
+                <div class="card custom-card bcurve" style="width: 21rem; background-color: #273b58; color: aliceblue;">
+                    <div class="bcurve" style="width: 20.8rem;height: 185px; background-color: #2b3d57;">
+                        <img class="card-img-top bcurve" src="images/project15.jpg" alt="Card image cap" style="width: 335px;height: 185px;">
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title"><strong>This is my Blog</strong></h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <hr>
+                        <a class="ihov" href="https://github.com/MillatSakib/dokan/" target="_blank" style="margin: 7px;">
+                            <i class="fab fa-github fa-lg"></i></a>
+                        <a class="ihov" href="https://millatsakib.github.io/dokan/" target="_blank" style="margin: 7px;"><i class="fas fa-external-link-alt fa-lg"></i></a>
+                        <p class="card-text text-white"><small>Last updated 3 months ago</small></p>
+                        <p class="card-text text-white" style="text-align: left;"><small><small>HTML&nbsp;&nbsp;CSS&nbsp;&nbsp;JAVASCRIPT&nbsp;&nbsp;BOOTSTRAP</small></small></p>
+                    </div>
+                </div>
+            </div>
+              <p>This is the content for the Other tab.</p>
           </div>
       </div>
-    </div>
+  </div>
 
-
-
-
-
-  
-    
-    
-    
-    </div>
-    <div class="project">
-      <h3>Project 2</h3>
-      <p>      For control my home light through internet I develop a website. For this <a href="https://millatsakib.github.io/IoT_Project/Control_Panel/">Click Here</a></p>
-    </div>
-    <!-- Add more projects as needed -->
-  </section>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
+  <script src="script.js"></script>
 
   <section id="contact">
     <h2>Contact Me</h2>
@@ -127,13 +186,11 @@
 
 
 
-
-
 <footer><div class="container">
   <i class="far fa-eye green-eye"></i>
     <!--The counter link made from https://hits.seeyoufarm.com-->&nbsp;
       <a href="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fmillatsakib.github.io&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=Visitors%28Today%2FTotal%29&edge_flat=false">
-        <img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fmillatsakib.github.io&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=Visitors%28Today%2FTotal%29&edge_flat=false" align="right">
+        <img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fmillatsakib.github.io&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=Visitors%28Today%2FTotal%29&edge_flat=false">
       </a>
       
     </div>
@@ -153,10 +210,6 @@
         
       </div>
       </address></p>
-      <a href="https://github.com/MillatSakib" style="margin: 7px;">
-        <i class="fab fa-github fa-lg"></i></a>
-        <a href="www.google.com" style="margin: 7px;"><i class="fas fa-external-link-alt fa-lg"></i></a>
-    
     </footer>
 </body>
 </html>
