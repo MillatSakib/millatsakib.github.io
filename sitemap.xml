@@ -6,6 +6,13 @@
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 <!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
 
+<url>
+  <loc>https://millatsakib.github.io/</loc>
+  <lastmod>2023-05-28T08:08:06+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>1.00</priority>
+</url>
+
 
 <url>
   <loc>https://millatsakib.github.io/dokan/</loc>
@@ -13,12 +20,7 @@
   <changefreq>daily</changefreq>
   <priority>1.00</priority>
 </url>
-<url>
-  <loc>https://millatsakib.github.io/</loc>
-  <lastmod>2023-05-28T08:08:06+00:00</lastmod>
-  <changefreq>daily</changefreq>
-  <priority>0.80</priority>
-</url>
+
 
 <!--This site show that  Duplicate without user-selected canonical because of the https://millatsakib.github.io/dokan/ site refer the site bellow
 So I remove this......

@@ -2,9 +2,10 @@ User-agent: *
 Disallow: /login.html
 Disallow: /IoT_Project/Control_Panel/
 Disallow: /index.html
-Allow: /about_us.html
-Allow: /contact.html
-Allow: /feedback.html
-Allow: /services.html
+Disallow: /dokan/index.html
+Allow: /dokan/about_us.html
+Allow: /dokan/contact.html
+Allow: /dokan/feedback.html
+Allow: /dokan/services.html
 Allow: /
 Sitemap: https://millatsakib.github.io/sitemap.xml
