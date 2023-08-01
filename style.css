@@ -1,10 +1,69 @@
-/*.mybutton{
-  padding: 30px;
-  background-color: #00CF5D;
-  color: #ffffff;
-  text-decoration: none;
+
+
+
+
+
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  padding: 20px;
 }
-*/
+
+.paragraph {
+  grid-column: 2 / 3;
+}
+
+.image {
+  grid-column: 1 / 2;
+  text-align: center;
+}
+
+.imgpro {
+  max-width: 50%;
+  min-width: 200px;
+  height: auto;
+}
+
+/* Media query for smaller screens */
+@media screen and (max-width: 768px) {
+  .grid-container {
+    grid-template-columns: 1fr; /* Single column layout */
+  }
+
+  .paragraph,
+  .image {
+    grid-column: 1; /* Both elements should start from the first column */
+  }
+}
+
+
+
+
+
+
+.image-cont {
+ 
+ 
+  transition: transform 0.3s ease; /* Add a smooth transition to the zoom effect */
+}
+
+.imgpro {
+  transition: transform 1s ease; /* Add a smooth transition to the zoom effect */
+}
+
+.image-cont:hover .imgpro {
+  transform: scale(1.15); /* Zoom in the image on hover */
+}
+
+
+
+
+
+
+
+
 /* Apply styles for the link button */
 .mybutton {
   display: inline-block;
@@ -13,7 +72,9 @@
   color: #ffffff; /* Set the text color */
   text-decoration: none; /* Remove underline */
   border: none; /* Remove border */
-  border-radius: 5px; /* Add border radius for rounded corners */
+  border-radius: 10px; /* Add border radius for rounded corners */
+  margin-block-end: 10px;
+  transition: background-color 0.5s ease;
 }
 
 /* Apply styles when the link button is hovered */
@@ -161,8 +222,6 @@ body {
     padding: 3px;
     background-color: rgb(37, 37, 37);
     color:white;
-    background-color: #333;
-    color: #fff;
     padding: 20px;
     text-align: center;
     z-index: 200;
@@ -194,6 +253,7 @@ body {
                 border-radius: 10px;
                 font-size: 16px;
                 padding: 10px;
+                margin-block-end: 10px;
               }
               input:hover {
                 border-color: rgb(90, 24, 151); /* Set the desired hover border color */
