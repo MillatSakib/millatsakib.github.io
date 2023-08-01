@@ -10,7 +10,7 @@
                   const tabName = this.dataset.tab;
                   tabContentDivs.forEach((tabContentDiv) => {
                       if (tabContentDiv.id === `${tabName}-tab-content`) {
-                          tabContentDiv.style.display = "block";
+                          tabContentDiv.style.display = "grid";
                       } else {
                           tabContentDiv.style.display = "none";
                       }
