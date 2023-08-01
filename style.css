@@ -1,3 +1,16 @@
+
+.project-container{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-gap: 20px;
+}
+
+
+.project {
+
+width: 100%;
+}
+
 .grid-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -110,20 +123,14 @@ body {
 .about-me{
   margin-left: 100px;
 }
-/* Add the following CSS styles */
-.project-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between; /* Adjust this property to align the cards */
-}
 
-.project {
-  width: calc(50% - 10px); /* Adjust the width of each card and add some margin between them */
-  margin-bottom: 20px;
-}
+
+
+
 
 /* Add the following CSS styles for the custom-card class */
 .custom-card {
+  
   transition: box-shadow 0.3s, transform 0.3s; /* Add transition effect for box-shadow and transform */
 }
 
