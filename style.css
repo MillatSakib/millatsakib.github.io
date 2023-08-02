@@ -1,9 +1,39 @@
 
+.progress{
+margin-top: 1cm;
+color: #00CF5D;
+height: 40px;
+width: 300px;
+border-radius: 0 10px 10px 0;
+}
+
+
+
+.flex-con{
+  display: flex;
+  height: 20px;
+  align-items: flex-end;
+  flex-wrap: nowrap;
+}
+
+.div1{
+  height: 40px;
+  color: #007bff;
+  background-color: white;  
+ font-size: 20px;
+ padding-top: 1px;
+ padding-bottom: 19px;
+ padding-left: 15px;
+ padding-right: 15px;
+  border-radius: 10px 0 0 10px;
+}
+
 .project-container{
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   grid-gap: 20px;
 }
+
 
 
 .project {
