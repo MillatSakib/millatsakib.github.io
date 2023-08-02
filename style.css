@@ -1,33 +1,41 @@
-
-.progress{
-margin-top: 1cm;
-color: #00CF5D;
-height: 40px;
-width: 300px;
-border-radius: 0 10px 10px 0;
+.progress {
+  margin-top: 1cm;
+  color: #00CF5D;
+  height: 40px;
+  flex-grow: 1; /* Let the progress bar grow to fill available space */
+  border-radius: 0 10px 10px 0;
 }
 
-
-
-.flex-con{
+.flex-con {
+  
   display: flex;
   height: 20px;
+ /* align-items: center;  Align items vertically to the center */
+  justify-content: center; /* Align items horizontally to the center */
   align-items: flex-end;
+  margin-top: 50px;
   flex-wrap: nowrap;
+  transition: transform 0.9s, box-shadow 0.3s;
+}
+.flex-con:hover {
+  transform: scale(1.1); /* Zoom in by 10% */
 }
 
-.div1{
+.div1 {
   height: 40px;
   color: #007bff;
   background-color: white;  
- font-size: 20px;
- padding-top: 1px;
- padding-bottom: 19px;
- padding-left: 15px;
- padding-right: 15px;
+  font-size: 20px;
+  padding-top: 1px;
+  padding-bottom: 19px;
+  padding-left: 15px;
+  padding-right: 15px;
   border-radius: 10px 0 0 10px;
 }
 
+.div3{
+ width: 50vw;
+}
 .project-container{
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
