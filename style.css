@@ -1,35 +1,49 @@
+.card-title{
+  height: 5vh;
+}
+.card-text {
+  height: 7vh; 
+  /* Adjust the maximum height as needed */
+  overflow:auto;
+  /* Add scrollbars when content overflows */
+
+}
+
 .imgicon {
   width: 35px;
   height: 35px;
 }
 
 .progress {
-  margin-top: 1cm;
   color: #00CF5D;
   height: 40px;
-  flex-grow: 1; /* Let the progress bar grow to fill available space */
+  flex-grow: 1;
+  /* Let the progress bar grow to fill available space */
   border-radius: 0 10px 10px 0;
 }
 
 .flex-con {
-  
+
   display: flex;
   height: 20px;
- /* align-items: center;  Align items vertically to the center */
-  justify-content: center; /* Align items horizontally to the center */
+  /* align-items: center;  Align items vertically to the center */
+  justify-content: center;
+  /* Align items horizontally to the center */
   align-items: flex-end;
   margin-top: 50px;
   flex-wrap: nowrap;
   transition: transform 0.7s;
 }
+
 .flex-con:hover {
-  transform: scale(1.05); /* Zoom in by 10% */
+  transform: scale(1.05);
+  /* Zoom in by 10% */
 }
 
 .div1 {
   height: 40px;
   color: #007bff;
-  background-color: white;  
+  background-color: white;
   font-size: 20px;
   padding-top: 1px;
   padding-bottom: 19px;
@@ -38,20 +52,20 @@
   border-radius: 10px 0 0 10px;
 }
 
-.div3{
- min-width: 40vw;
+.div3 {
+  min-width: 40vw;
 }
-.project-container{
+
+.project-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  grid-gap: 20px;
+  grid-gap: 50px;
 }
 
 
 
 .project {
-
-width: 100%;
+  width: 100%;
 }
 
 .grid-container {
@@ -79,12 +93,14 @@ width: 100%;
 /* Media query for smaller screens */
 @media screen and (max-width: 768px) {
   .grid-container {
-    grid-template-columns: 1fr; /* Single column layout */
+    grid-template-columns: 1fr;
+    /* Single column layout */
   }
 
   .paragraph,
   .image {
-    grid-column: 1; /* Both elements should start from the first column */
+    grid-column: 1;
+    /* Both elements should start from the first column */
   }
 }
 
@@ -94,17 +110,20 @@ width: 100%;
 
 
 .image-cont {
- 
- 
-  transition: transform 0.3s ease; /* Add a smooth transition to the zoom effect */
+
+
+  transition: transform 0.3s ease;
+  /* Add a smooth transition to the zoom effect */
 }
 
 .imgpro {
-  transition: transform 1s ease; /* Add a smooth transition to the zoom effect */
+  transition: transform 1s ease;
+  /* Add a smooth transition to the zoom effect */
 }
 
 .image-cont:hover .imgpro {
-  transform: scale(1.15); /* Zoom in the image on hover */
+  transform: scale(1.15);
+  /* Zoom in the image on hover */
 }
 
 
@@ -118,34 +137,45 @@ width: 100%;
 .mybutton {
   display: inline-block;
   padding: 15px 30px;
-  background-color: #007bff; /* Set the background color */
-  color: #ffffff; /* Set the text color */
-  text-decoration: none; /* Remove underline */
-  border: none; /* Remove border */
-  border-radius: 10px; /* Add border radius for rounded corners */
+  background-color: #007bff;
+  /* Set the background color */
+  color: #ffffff;
+  /* Set the text color */
+  text-decoration: none;
+  /* Remove underline */
+  border: none;
+  /* Remove border */
+  border-radius: 10px;
+  /* Add border radius for rounded corners */
   margin-block-end: 10px;
   transition: background-color 0.5s ease;
 }
 
 /* Apply styles when the link button is hovered */
 .mybutton:hover {
-  background-color: #0056b3; /* Change the background color on hover */
+  background-color: #0056b3;
+  /* Change the background color on hover */
 }
 
 /* Style for the list container */
 .list-container {
-  display: flex; /* Use flexbox to display lists side by side */
+  display: flex;
+  /* Use flexbox to display lists side by side */
 }
 
 /* Style for the list items */
 .side-by-side {
-  color: #00CF5D;;
-  margin: 0; /* Remove default margin */
-  padding: 0; /* Remove default padding */
+  color: #00CF5D;
+  ;
+  margin: 0;
+  /* Remove default margin */
+  padding: 0;
+  /* Remove default padding */
 }
 
 .side-by-side li {
-  padding: 8px; /* Add some padding to separate list items */
+  padding: 8px;
+  /* Add some padding to separate list items */
 }
 
 
@@ -155,7 +185,8 @@ width: 100%;
   top: 0;
   width: 100%;
   z-index: 1000;
-  transition: top 0.4s; /* Add a smooth transition effect for hiding/showing the navbar */
+  transition: top 0.4s;
+  /* Add a smooth transition effect for hiding/showing the navbar */
 }
 
 /* Add some padding to the body so that content doesn't go behind the navbar */
@@ -163,48 +194,59 @@ body {
   padding-top: 70px;
 }
 
-.about-me{
+.about-me {
   margin-left: 100px;
 }
 
 
 
 
-
 /* Add the following CSS styles for the custom-card class */
 .custom-card {
-  
-  transition: box-shadow 0.3s, transform 0.3s; /* Add transition effect for box-shadow and transform */
+
+  transition: box-shadow 0.3s, transform 0.3s;
+  /* Add transition effect for box-shadow and transform */
 }
 
 .custom-card:hover {
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Add a shadow effect when hovering */
-  transform: scale(1.05); /* Zoom in the card a little when hovering */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  /* Add a shadow effect when hovering */
+  transform: scale(1.05);
+  /* Zoom in the card a little when hovering */
 }
-.bcurve{
+
+.bcurve {
+  margin: auto;
   border-radius: 15px;
+
 }
+
 .bordered-text {
   border: 2px solid rgb(5, 236, 63);
-  padding: 5px; /* Optional: Add padding to create some space between the text and the border */
+  padding: 5px;
+  /* Optional: Add padding to create some space between the text and the border */
   border-radius: 10px;
-  
-} 
-.bordered-text{
+
+}
+
+.bordered-text {
   transition: background-color 0.5s ease;
 }
+
 .bordered-text:hover {
   background-color: rgb(5, 236, 63);
 }
- 
- /* Custom styles for the selected and unselected tabs */
- .nav-pills .nav-item .nav-link.active {
+
+/* Custom styles for the selected and unselected tabs */
+.nav-pills .nav-item .nav-link.active {
   background-color: rgb(73, 228, 73);
   color: white;
 }
+
 .nav-pills .nav-item .nav-link {
   color: rgb(73, 228, 73);
 }
+
 .image-container {
   width: 280px;
   height: 185px;
@@ -226,88 +268,97 @@ body {
 }
 
 /* Add the hover effect */
-.ihov:hover{
-  color: #00ff00; /* Green color */
+.ihov:hover {
+  color: #00ff00;
+  /* Green color */
 }
 
 
 .container {
   display: flex;
   align-items: center;
-  justify-content:center;
+  justify-content: center;
 }
 
 .green-eye {
-  color: #00CF5D;;
+  color: #00CF5D;
+  ;
 }
-.bod{
+
+.bod {
   padding: 20px;
 }
 
 body {
-    position: relative;
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    background-color: #212c3b;;
-    color: #ffffff;
-  }
+  position: relative;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #212c3b;
+  ;
+  color: #ffffff;
+}
 
-  
-  #pageContent {
-    display: block;
-  }
-  footer{
-    position: relative;
-    grid-column: 1/-1;
-    width: auto;
-    height: auto;
-    top: 250px;
-    text-align:center;
-    padding: 3px;
-    background-color: rgb(37, 37, 37);
-    color:white;
-    padding: 20px;
-    text-align: center;
-    z-index: 200;
-  }
-  
-  .foota:link {
-    color: rgb(255, 133, 133);
-  }
-  
-  /* visited link */
-  .foota:visited {
-    color: rgb(153, 255, 153);
-  }
-  
-  /* mouse over link */
-  .foota:hover {
-    color: rgb(255, 255, 255);
-  }
-  
-  /* selected link */
-  .foota:active {
-    color: rgb(95, 95, 255);
-  }
-  
-  /*Input start*/
-            input {
-                border: 4px solid #b6fc66; /* Set the border style */
-                border-color: rgb(227, 255, 11); /* Set the border color */
-                border-radius: 10px;
-                font-size: 16px;
-                padding: 10px;
-                margin-block-end: 10px;
-              }
-              input:hover {
-                border-color: rgb(90, 24, 151); /* Set the desired hover border color */
-              }
-              
-              input:focus {
-                outline: none; /* Remove the default focus outline */
-                border-color: rgb(0, 224, 30); /* Set the desired focus border color */
-              }
-              /*Input END*/
-              
-              
-              
+
+#pageContent {
+  display: block;
+}
+
+footer {
+  position: relative;
+  grid-column: 1/-1;
+  width: auto;
+  height: auto;
+  top: 250px;
+  text-align: center;
+  padding: 3px;
+  background-color: rgb(37, 37, 37);
+  color: white;
+  padding: 20px;
+  text-align: center;
+  z-index: 200;
+}
+
+.foota:link {
+  color: rgb(255, 133, 133);
+}
+
+/* visited link */
+.foota:visited {
+  color: rgb(153, 255, 153);
+}
+
+/* mouse over link */
+.foota:hover {
+  color: rgb(255, 255, 255);
+}
+
+/* selected link */
+.foota:active {
+  color: rgb(95, 95, 255);
+}
+
+/*Input start*/
+input {
+  border: 4px solid #b6fc66;
+  /* Set the border style */
+  border-color: rgb(227, 255, 11);
+  /* Set the border color */
+  border-radius: 10px;
+  font-size: 16px;
+  padding: 10px;
+  margin-block-end: 10px;
+}
+
+input:hover {
+  border-color: rgb(90, 24, 151);
+  /* Set the desired hover border color */
+}
+
+input:focus {
+  outline: none;
+  /* Remove the default focus outline */
+  border-color: rgb(0, 224, 30);
+  /* Set the desired focus border color */
+}
+
+/*Input END*/
