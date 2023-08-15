@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
     const lineHeight = 20; // Adjust this value to match your line height
-    const linesPerScroll = 2; // Number of lines to scroll per scroll event
+    const linesPerScroll = 1; // Number of lines to scroll per scroll event
     let scrolling = false; // Track if scrolling is already in progress
   
     const cardTextElements = document.querySelectorAll(".card-text");

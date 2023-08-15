@@ -85,6 +85,7 @@
 }
 
 .imgpro {
+  filter: grayscale(70%);
   max-width: 50%;
   min-width: 200px;
   height: auto;
@@ -117,11 +118,12 @@
 }
 
 .imgpro {
-  transition: transform 1s ease;
+  transition: all 1s ease;
   /* Add a smooth transition to the zoom effect */
 }
 
 .image-cont:hover .imgpro {
+  filter: grayscale(0%);
   transform: scale(1.15);
   /* Zoom in the image on hover */
 }
