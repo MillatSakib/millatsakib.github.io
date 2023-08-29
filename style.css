@@ -304,16 +304,13 @@ body {
 #pageContent {
   display: block;
 }
-
 footer {
   position: relative;
-  grid-column: 1/-1;
-  width: auto;
+  width: 100%;
   height: auto;
   top: 250px;
-  text-align: center;
   padding: 3px;
-  background-color: rgb(37, 37, 37);
+  background: linear-gradient(to right, #19330d,#4b2e08, #101074);
   color: white;
   padding: 20px;
   text-align: center;
