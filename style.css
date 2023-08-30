@@ -1,10 +1,11 @@
-.card-title{
+.card-title {
   height: 5vh;
 }
+
 .card-text {
-  height: 7vh; 
+  height: 7vh;
   /* Adjust the maximum height as needed */
-  overflow:auto;
+  overflow: auto;
   /* Add scrollbars when content overflows */
 
 }
@@ -304,13 +305,14 @@ body {
 #pageContent {
   display: block;
 }
+
 footer {
   position: relative;
   width: 100%;
   height: auto;
   top: 250px;
   padding: 3px;
-  background: linear-gradient(to right, #19330d,#4b2e08, #101074);
+  background: linear-gradient(to right, #19330d, #4b2e08, #101074);
   color: white;
   padding: 20px;
   text-align: center;
