@@ -1,3 +1,6 @@
+/* .text-visibility{
+  visibility: hidden;
+} */
 .card-title {
   height: 5vh;
 }
@@ -140,7 +143,7 @@
 .mybutton {
   display: inline-block;
   padding: 15px 30px;
-  background-color: #007bff;
+  background-color: #0053BD;
   /* Set the background color */
   color: #ffffff;
   /* Set the text color */
@@ -242,12 +245,12 @@ body {
 
 /* Custom styles for the selected and unselected tabs */
 .nav-pills .nav-item .nav-link.active {
-  background-color: rgb(73, 228, 73);
+  background-color: #6716F3;
   color: white;
 }
 
 .nav-pills .nav-item .nav-link {
-  color: rgb(73, 228, 73);
+  color: #C7A9F9
 }
 
 .image-container {
