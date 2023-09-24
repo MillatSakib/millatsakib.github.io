@@ -1,6 +1,69 @@
 /* .text-visibility{
   visibility: hidden;
 } */
+.inline{
+  display: block;
+}
+code{
+  color: white;
+  font-weight: 900;
+}
+#color{
+  color: white;
+}
+.contact_icon{
+  font-size: 3rem;
+ 
+
+}
+.card-texft{
+margin-top: 2rem;
+}
+.email-icon {
+  width: 24px;
+  height: 24px;
+  fill: currentColor;
+}
+.email-icon {
+  width: 48px;
+  height: 48px;
+  fill: blue;
+}
+
+
+
+
+
+
+.contact_partition{
+  text-align: center;
+  align-content: center;
+  justify-content: center;
+}
+
+
+.grid_margin{
+  
+  margin: 30px;
+}
+
+.contact_partition:first-child {
+    margin-right: 10px; /* Adjust the gap size as needed */
+  }
+
+  .contact_partition:last-child {
+    margin-left: 10px; /* Adjust the gap size as needed */
+  }
+
+
+#contact{
+  margin: 50px;
+  
+}
+.contact_partition{
+  margin: 5000px;
+}
+
 .card-title {
   height: 5vh;
 }
