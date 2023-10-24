@@ -1,3 +1,26 @@
+.whatsapp {
+  width: 50px;
+  height: 50px;
+  right: 110px;
+  bottom: 190px;
+  z-index: 999999;
+  position: fixed;
+}
+
+.code {
+  right: 100px;
+  bottom: 170px;
+  opacity: 0;
+  transition: opacity 0.3s;
+  width: 150px;
+  height: 160px;
+}
+
+.whatsapp:hover .code {
+  opacity: 1;
+}
+
+
 /* .text-visibility{
   visibility: hidden;
 } */
@@ -276,6 +299,8 @@ body {
   transition: box-shadow 0.3s, transform 0.3s;
   /* Add transition effect for box-shadow and transform */
 }
+
+
 
 .custom-card:hover {
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);

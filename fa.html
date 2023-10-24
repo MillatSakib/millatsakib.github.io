@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Page Title</title>
+    <!-- Include jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body style="background-color: black;">
+    <div class="col-sm-5 offset-sm-2 col-md-6 offset-md-0" class="contact_partition">
+        <div class="grid_margin">
+            <div class="alert alert-success" id="status" style="display: none; color: #ffffff;"></div>
+           
+            <h2 style="color: #ffffff; text-decoration: underline;">Sent Message</h2>
+            <form id="messageForm">
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="yourname">Name:</label>
+                        <input type="text" name="name" class="form-control" id="yourname" placeholder="Your name">
+                    </div>
+                
+                
+                    <div class="form-group col-md-6">
+                        <label for="exampleFormControlInput1">Email address:</label>
+                        <input name="email" type="email" class="form-control" id="exampleFormControlInput1"
+                            placeholder="name@example.com">
+                    </div>
+                
+                </div>
+                <div class="form-group">
+                    <label for="exampleFormControlTextarea1">Message:</label>
+                    <textarea name="message" class="form-control" id="exampleFormControlTextarea1" rows="3"
+                        placeholder="Write your message here..."></textarea>
+                </div>
+                <div>
+                    <br>
+                    <button type="button" id="sendMessage" class="btn btn-primary">Send Message</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- JavaScript code -->
+    <script>
+        $(document).ready(function () {
+            // Handle the click event on the "Send Message" button
+            $("#sendMessage").click(function () {
+                // Get form data
+                var formData = {
+                    name: $("#yourname").val(),
+                    email: $("#exampleFormControlInput1").val(),
+                    message: $("#exampleFormControlTextarea1").val(),
+                    _autoresponse: "Hey, Thank you for messaging me. I will reply as soon as possible",
+                    _next: "https://millatsakib.github.io",
+                    _cc: "millatsakib7@gmail.com,millatsakib03@gmail.com",
+                    _captcha: "false",
+                    _subject: "New message sent from your portfolio",
+                    _template: "table"
+                };
+
+                // Send the AJAX request
+                $.ajax({
+                    type: "POST",
+                    url: "https://formsubmit.co/millatsakib01@gmail.com",
+                    data: formData,
+                    success: function (response) {
+                        // Handle the success response (if needed)
+
+                        // You can also update your UI or perform other actions here
+                        // Display the success message
+                        const statusElement = document.getElementById("status");
+                        statusElement.textContent = "Message Sent Successfully.";
+
+                        // Hide the success message after a delay (e.g., 3 seconds)
+                        
+                    },
+                    error: function (xhr, status, error) {
+                        // Handle any errors that occur during the AJAX request
+                        console.error("Error sending message:", error);
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>
