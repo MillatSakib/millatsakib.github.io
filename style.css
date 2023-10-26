@@ -1,19 +1,48 @@
-.resume:hover{
+/*Here I design scroll bar*/
+::-webkit-scrollbar {
+  width: 0.7rem;
+  transition: transform 0.5s ease;
+}
+
+::-webkit-scrollbar-thumb {
+  background: blueviolet;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: #cbc6ff;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #ff4d4d;
+  border-radius: 4px;
+}
+
+/*Scroll bar CSS ends here.*/
+
+::selection {
+  background-color: blueviolet;
+}
+
+::-webkit-scrollbar-corner {
+  color: #0053bd;
+}
+
+.resume:hover {
   background-color: rgb(5, 236, 63);
   box-shadow: 0 0 5px #26ff31, 0 0 15px #26ff31, 0 0 20px #26ff31,
     0 0 100px #26ff31;
 }
-.resume{
+.resume {
   margin: 0;
   border: 0;
   text-decoration: none;
   color: white;
   border: 2px solid rgb(5, 236, 63);
-  padding: 5px 15px; 
+  padding: 5px 15px;
   border-radius: 10px;
   transition: background-color 0.5s ease;
   font-weight: bold;
-  
 }
 .whatsapp {
   width: 50px;
@@ -37,27 +66,24 @@
   opacity: 1;
 }
 
-
 /* .text-visibility{
   visibility: hidden;
 } */
-.inline{
+.inline {
   display: block;
 }
-code{
+code {
   color: white;
   font-weight: 900;
 }
-#color{
+#color {
   color: white;
 }
-.contact_icon{
+.contact_icon {
   font-size: 3rem;
- 
-
 }
-.card-texft{
-margin-top: 2rem;
+.card-texft {
+  margin-top: 2rem;
 }
 .email-icon {
   width: 24px;
@@ -70,37 +96,28 @@ margin-top: 2rem;
   fill: blue;
 }
 
-
-
-
-
-
-.contact_partition{
+.contact_partition {
   text-align: center;
   align-content: center;
   justify-content: center;
 }
 
-
-.grid_margin{
-  
+.grid_margin {
   margin: 30px;
 }
 
 .contact_partition:first-child {
-    margin-right: 10px; /* Adjust the gap size as needed */
-  }
-
-  .contact_partition:last-child {
-    margin-left: 10px; /* Adjust the gap size as needed */
-  }
-
-
-#contact{
-  margin: 50px;
-  
+  margin-right: 10px; /* Adjust the gap size as needed */
 }
-.contact_partition{
+
+.contact_partition:last-child {
+  margin-left: 10px; /* Adjust the gap size as needed */
+}
+
+#contact {
+  margin: 50px;
+}
+.contact_partition {
   margin: 5000px;
 }
 
@@ -113,7 +130,6 @@ margin-top: 2rem;
   /* Adjust the maximum height as needed */
   overflow: auto;
   /* Add scrollbars when content overflows */
-
 }
 
 .imgicon {
@@ -122,7 +138,7 @@ margin-top: 2rem;
 }
 
 .progress {
-  color: #00CF5D;
+  color: #00cf5d;
   height: 40px;
   flex-grow: 1;
   /* Let the progress bar grow to fill available space */
@@ -130,7 +146,6 @@ margin-top: 2rem;
 }
 
 .flex-con {
-
   display: flex;
   height: 20px;
   /* align-items: center;  Align items vertically to the center */
@@ -168,8 +183,6 @@ margin-top: 2rem;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   grid-gap: 50px;
 }
-
-
 
 .project {
   width: 100%;
@@ -212,14 +225,7 @@ margin-top: 2rem;
   }
 }
 
-
-
-
-
-
 .image-cont {
-
-
   transition: transform 0.3s ease;
   /* Add a smooth transition to the zoom effect */
 }
@@ -235,18 +241,11 @@ margin-top: 2rem;
   /* Zoom in the image on hover */
 }
 
-
-
-
-
-
-
-
 /* Apply styles for the link button */
 .mybutton {
   display: inline-block;
   padding: 15px 30px;
-  background-color: #0053BD;
+  background-color: #0053bd;
   /* Set the background color */
   color: #ffffff;
   /* Set the text color */
@@ -274,8 +273,7 @@ margin-top: 2rem;
 
 /* Style for the list items */
 .side-by-side {
-  color: #00CF5D;
-  ;
+  color: #00cf5d;
   margin: 0;
   /* Remove default margin */
   padding: 0;
@@ -286,7 +284,6 @@ margin-top: 2rem;
   padding: 8px;
   /* Add some padding to separate list items */
 }
-
 
 /* Add the CSS for sticky-top navbar */
 .navbar {
@@ -307,17 +304,11 @@ body {
   margin-left: 100px;
 }
 
-
-
-
 /* Add the following CSS styles for the custom-card class */
 .custom-card {
-
   transition: box-shadow 0.3s, transform 0.3s;
   /* Add transition effect for box-shadow and transform */
 }
-
-
 
 .custom-card:hover {
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
@@ -329,18 +320,16 @@ body {
 .bcurve {
   margin: auto;
   border-radius: 15px;
-
 }
-
 
 /* Custom styles for the selected and unselected tabs */
 .nav-pills .nav-item .nav-link.active {
-  background-color: #6716F3;
+  background-color: #6716f3;
   color: white;
 }
 
 .nav-pills .nav-item .nav-link {
-  color: #C7A9F9
+  color: #c7a9f9;
 }
 
 .image-container {
@@ -369,7 +358,6 @@ body {
   /* Green color */
 }
 
-
 .container {
   display: flex;
   align-items: center;
@@ -377,8 +365,7 @@ body {
 }
 
 .green-eye {
-  color: #00CF5D;
-  ;
+  color: #00cf5d;
 }
 
 .bod {
@@ -390,10 +377,8 @@ body {
   font-family: Arial, sans-serif;
   line-height: 1.6;
   background-color: #212c3b;
-  ;
   color: #ffffff;
 }
-
 
 #pageContent {
   display: block;
