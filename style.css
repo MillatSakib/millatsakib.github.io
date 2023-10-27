@@ -1,4 +1,8 @@
-/*Here I design scroll bar*/
+*{
+  margin: 0;
+  padding: 0;
+}
+  /*Here I design scroll bar*/
 ::-webkit-scrollbar {
   width: 0.7rem;
   transition: transform 0.5s ease;
@@ -326,10 +330,20 @@ body {
 .nav-pills .nav-item .nav-link.active {
   background-color: #6716f3;
   color: white;
+  
 }
 
 .nav-pills .nav-item .nav-link {
   color: #c7a9f9;
+  /* transition: all 2s ease-in-out; */
+
+}
+.nav-pills .nav-item {
+  transition: all .3s ease-in-out;
+}
+.nav-pills .nav-item:hover{
+    text-shadow: 0 0 5px #8f4eff, 0 0 15px #8f4eff, 0 0 20px #8f4eff,
+    0 0 100px #8f4eff;
 }
 
 .image-container {
@@ -390,7 +404,7 @@ footer {
   height: auto;
   top: 250px;
   padding: 3px;
-  background: linear-gradient(to right, #19330d, #4b2e08, #101074);
+  background: linear-gradient(to right, #2b2b75, #2C3A47,#28286b );
   color: white;
   padding: 20px;
   text-align: center;
