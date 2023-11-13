@@ -3,6 +3,11 @@
   padding: 0;
   
 }
+.shadowl {
+         filter: brightness(120%);
+         filter: contrast(120%);
+         filter: drop-shadow(5px 5px 3px #4976b6);
+      }
   /*Here I design scroll bar*/
 ::-webkit-scrollbar {
   width: 0.7rem;
