@@ -1,14 +1,13 @@
-*{
+* {
   margin: 0;
   padding: 0;
-  
 }
 .shadowl {
-         filter: brightness(120%);
-         filter: contrast(120%);
-         filter: drop-shadow(5px 5px 3px #4976b6);
-      }
-  /*Here I design scroll bar*/
+  filter: brightness(120%);
+  filter: contrast(120%);
+  filter: drop-shadow(5px 5px 3px #4976b6);
+}
+/*Here I design scroll bar*/
 ::-webkit-scrollbar {
   width: 0.7rem;
   transition: transform 0.5s ease;
@@ -55,7 +54,6 @@
   font-weight: bold;
 }
 
-
 .whatsapp {
   position: fixed;
   width: 50px;
@@ -64,41 +62,33 @@
   right: 20px;
   bottom: 15px;
   z-index: 999999;
-
-  
 }
-.ccc{
-    position: fixed;
+.ccc {
+  position: fixed;
   width: 150px;
   height: 160px;
   right: 20px;
   bottom: 75px;
   z-index: 999999;
- 
-  
-
 }
 
-
-.whatsapp + a{
-    display: none;
-     opacity: 0;
-  
+.whatsapp + a {
+  display: none;
+  opacity: 0;
 }
 
-.whatsapp:hover + a{
-    display: block;
-    opacity: 1;
-    cursor: pointer;
+.whatsapp:hover + a {
+  display: block;
+  opacity: 1;
+  cursor: pointer;
 }
 
-
-.ccc:hover{
-    display: block;
-    opacity: 1;
+.ccc:hover {
+  display: block;
+  opacity: 1;
 }
-.whatsapp:hover{
-    cursor: pointer;
+.whatsapp:hover {
+  cursor: pointer;
 }
 .inline {
   display: block;
@@ -357,19 +347,17 @@ body {
 .nav-pills .nav-item .nav-link.active {
   background-color: #6716f3;
   color: white;
-  
 }
 
 .nav-pills .nav-item .nav-link {
   color: #c7a9f9;
   /* transition: all 2s ease-in-out; */
-
 }
 .nav-pills .nav-item {
-  transition: all .3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
-.nav-pills .nav-item:hover{
-    text-shadow: 0 0 5px #8f4eff, 0 0 15px #8f4eff, 0 0 20px #8f4eff,
+.nav-pills .nav-item:hover {
+  text-shadow: 0 0 5px #8f4eff, 0 0 15px #8f4eff, 0 0 20px #8f4eff,
     0 0 100px #8f4eff;
 }
 
@@ -426,35 +414,9 @@ body {
 }
 
 footer {
-  position: relative;
-  width: 100%;
-  height: auto;
-  top: 250px;
-  padding: 3px;
-  background: linear-gradient(to right, #2b2b75, #2C3A47,#28286b );
-  color: white;
-  padding: 20px;
+  background-color: #2b3d57;
   text-align: center;
-  z-index: 200;
-}
-
-.foota:link {
-  color: rgb(255, 133, 133);
-}
-
-/* visited link */
-.foota:visited {
-  color: rgb(153, 255, 153);
-}
-
-/* mouse over link */
-.foota:hover {
-  color: rgb(255, 255, 255);
-}
-
-/* selected link */
-.foota:active {
-  color: rgb(95, 95, 255);
+  padding: 2rem;
 }
 
 /*Input start*/
@@ -482,3 +444,83 @@ input:focus {
 }
 
 /*Input END*/
+
+.carde {
+  position: relative;
+  width: 300px;
+  height: 350px;
+  margin: 20px;
+}
+
+.carde .face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: 0.5s;
+}
+
+.carde .front {
+  transform: perspective(600px) rotateY(0deg);
+  box-shadow: 0 5px 10px #000;
+}
+
+.carde .front img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.carde .front h3 {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 45px;
+  line-height: 45px;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.4);
+  text-align: center;
+}
+
+.carde .back {
+  transform: perspective(600px) rotateY(180deg);
+  background: rgb(3, 35, 54);
+  padding: 15px;
+  color: #f3f3f3;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+  box-shadow: 0 5px 10px #000;
+}
+
+.carde .back .link {
+  border-top: solid 1px #f3f3f3;
+  height: 50px;
+  line-height: 50px;
+}
+
+.carde .back .link a {
+  color: #f3f3f3;
+}
+
+.carde .back h3 {
+  font-size: 30px;
+  margin-top: 20px;
+  letter-spacing: 2px;
+}
+
+.carde .back p {
+  letter-spacing: 1px;
+}
+
+.carde:hover .front {
+  transform: perspective(600px) rotateY(180deg);
+}
+
+.carde:hover .back {
+  transform: perspective(600px) rotateY(360deg);
+}
