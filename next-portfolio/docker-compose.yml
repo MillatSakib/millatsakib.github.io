@@ -1,0 +1,13 @@
+services:
+  next-portfolio:
+    container_name: next-portfolio
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    environment:
+      NODE_ENV: production
+      PORT: 3000
+      HOSTNAME: 0.0.0.0
+    restart: always
