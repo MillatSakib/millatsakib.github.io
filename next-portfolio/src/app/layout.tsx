@@ -37,6 +37,17 @@ export const metadata: Metadata = {
     siteName: "Portfolio",
     type: "website",
   },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+    },
+  },
+  verification: {
+    google: "google493b1073fee4b8de",
+  },
   icons: {
     icon: "/logo2.png",
   },
