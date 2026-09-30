@@ -144,7 +144,7 @@ export const portfolioData: PortfolioData = {
     title: "About Me",
     description:
       "Hello! I'm Md. Sohan Millat Sakib, a passionate full stack web developer. I love learning, sharing knowledge publicly, and building useful web experiences with JavaScript. I stay strategic, goal-oriented, and focused on outcomes. I am currently completing my graduation in Computer Science and Engineering at Green University of Bangladesh, Narayanganj.",
-    imageSrc: "/images/sohan-millat-sakib.png",
+    imageSrc: "/images/sohan-millat-sakib.jpg",
     imageAlt: "Md. Sohan Millat Sakib",
     projectCtaUrl: "#projects",
     hireMeUrl: "https://www.linkedin.com/in/millatsakib/",
@@ -175,7 +175,7 @@ export const portfolioData: PortfolioData = {
       title: "PetConnect",
       description:
         "A pet adoption and donation campaign platform where users can post adoption listings and fundraising campaigns, while admins verify donation requests.",
-      imageSrc: "/images/Project4.png",
+      imageSrc: "/images/Project4.jpg",
       imageAlt: "PetConnect project preview",
       links: [
         {

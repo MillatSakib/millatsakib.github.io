@@ -75,7 +75,7 @@ export default function ContactSection({ contactMethods }: ContactSectionProps) 
   };
 
   return (
-    <section id="contact" className="scroll-mt-28">
+    <section id="contact" aria-label="Contact Me" className="scroll-mt-28">
       <SectionHeading title="Contact Me" />
 
       <div className="grid gap-8 lg:grid-cols-2">

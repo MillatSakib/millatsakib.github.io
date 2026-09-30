@@ -45,6 +45,73 @@ export default async function Home() {
         socials={viewModel.socials}
         currentYear={viewModel.currentYear}
       />
+
+      {/* JSON-LD Structured Data — Person */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Person",
+            "@id": "https://millatsakib.com/#person",
+            name: "Md. Sohan Millat Sakib",
+            alternateName: ["Millat Sakib", "Sohan Millat Sakib", "millatsakib"],
+            url: "https://millatsakib.com",
+            image: {
+              "@type": "ImageObject",
+              url: "https://millatsakib.com/images/sohan-millat-sakib.jpg",
+              width: 600,
+              height: 600,
+            },
+            jobTitle: "MERN Stack Web Developer",
+            description:
+              "Md. Sohan Millat Sakib is a MERN Stack Web Developer and Software Engineer based in Bangladesh, specialising in React, Node.js, Express, and MongoDB.",
+            email: "me@millatsakib.com",
+            nationality: "Bangladeshi",
+            alumniOf: {
+              "@type": "CollegeOrUniversity",
+              name: "Green University of Bangladesh",
+              url: "https://green.edu.bd",
+            },
+            knowsAbout: [
+              "React",
+              "Node.js",
+              "Express.js",
+              "MongoDB",
+              "JavaScript",
+              "TypeScript",
+              "Next.js",
+              "Full Stack Web Development",
+              "MERN Stack",
+            ],
+            sameAs: [
+              ...viewModel.socials.map((s) => s.href),
+              "https://github.com/MillatSakib",
+              "https://www.linkedin.com/in/millatsakib/",
+            ],
+          }),
+        }}
+      />
+
+      {/* JSON-LD Structured Data — WebSite (enables Google Sitelinks Search Box) */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            "@id": "https://millatsakib.com/#website",
+            name: "Md. Sohan Millat Sakib | Portfolio",
+            url: "https://millatsakib.com",
+            description:
+              "Portfolio of Md. Sohan Millat Sakib — MERN Stack Web Developer & Software Engineer at Green University of Bangladesh.",
+            author: {
+              "@id": "https://millatsakib.com/#person",
+            },
+            inLanguage: "en-US",
+          }),
+        }}
+      />
     </div>
   );
 }

@@ -5,10 +5,11 @@ export default function robots(): MetadataRoute.Robots {
     rules: [
       {
         userAgent: "*",
-        allow: ["/", "/dokan/about_us.html", "/dokan/contact.html", "/dokan/feedback.html", "/dokan/services.html"],
-        disallow: ["/login.html", "/IoT_Project/Control_Panel/", "/index.html", "/dokan/index.html"],
+        allow: "/",
+        disallow: ["/admin", "/api/"],
       },
     ],
-    sitemap: "https://millatsakib.github.io/sitemap.xml",
+    sitemap: "https://millatsakib.com/sitemap.xml",
+    host: "https://millatsakib.com",
   };
 }

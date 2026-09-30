@@ -8,7 +8,7 @@ interface ProjectsSectionProps {
 
 export default function ProjectsSection({ projects }: ProjectsSectionProps) {
   return (
-    <section id="projects" className="scroll-mt-28">
+    <section id="projects" aria-label="My Projects" className="scroll-mt-28">
       <SectionHeading title="My Projects" subtitle="All Projects" />
 
       <div className="grid gap-6 md:grid-cols-2 md:gap-7">

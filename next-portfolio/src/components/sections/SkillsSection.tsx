@@ -72,7 +72,7 @@ export default function SkillsSection({ categories }: SkillsSectionProps) {
   }
 
   return (
-    <section id="skills" className="scroll-mt-28">
+    <section id="skills" aria-label="My Skills" className="scroll-mt-28">
       <SectionHeading title="My Skills" />
 
       <div className="rounded-3xl border border-white/10 bg-white/[0.045] p-5 shadow-[0_18px_50px_-30px_rgba(15,23,42,1)] backdrop-blur-sm sm:p-7">

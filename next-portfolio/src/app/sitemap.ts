@@ -1,44 +1,38 @@
 import type { MetadataRoute } from "next";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const lastModified = new Date();
+  const lastModified = new Date("2024-12-01");
 
   return [
     {
-      url: "https://millatsakib.github.io/",
+      url: "https://millatsakib.com/",
       lastModified,
-      changeFrequency: "daily",
-      priority: 1,
+      changeFrequency: "monthly",
+      priority: 1.0,
     },
     {
-      url: "https://millatsakib.github.io/dokan/",
+      url: "https://millatsakib.com/#about",
       lastModified,
-      changeFrequency: "daily",
-      priority: 1,
-    },
-    {
-      url: "https://millatsakib.github.io/dokan/about_us.html",
-      lastModified,
-      changeFrequency: "daily",
+      changeFrequency: "monthly",
       priority: 0.8,
     },
     {
-      url: "https://millatsakib.github.io/dokan/services.html",
+      url: "https://millatsakib.com/#projects",
       lastModified,
-      changeFrequency: "daily",
+      changeFrequency: "monthly",
       priority: 0.8,
     },
     {
-      url: "https://millatsakib.github.io/dokan/contact.html",
+      url: "https://millatsakib.com/#skills",
       lastModified,
-      changeFrequency: "daily",
-      priority: 0.8,
+      changeFrequency: "monthly",
+      priority: 0.7,
     },
     {
-      url: "https://millatsakib.github.io/dokan/feedback.html",
+      url: "https://millatsakib.com/#contact",
       lastModified,
-      changeFrequency: "daily",
-      priority: 0.8,
+      changeFrequency: "yearly",
+      priority: 0.6,
     },
   ];
 }

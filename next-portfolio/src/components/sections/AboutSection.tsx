@@ -10,7 +10,7 @@ interface AboutSectionProps {
 
 export default function AboutSection({ about }: AboutSectionProps) {
   return (
-    <section id="about" className="scroll-mt-28">
+    <section id="about" aria-label="About Me" className="scroll-mt-28">
       <SectionHeading title={about.title} />
 
       <div className="grid items-center gap-8 lg:grid-cols-[minmax(220px,380px)_1fr]">

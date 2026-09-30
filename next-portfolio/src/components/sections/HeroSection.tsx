@@ -13,7 +13,7 @@ export default function HeroSection({ hero }: HeroSectionProps) {
   const typedRole = useTypewriter({ words: hero.roles });
 
   return (
-    <section className="scroll-mt-28 pt-8 sm:pt-12">
+    <section id="hero" aria-label="Introduction" className="scroll-mt-28 pt-8 sm:pt-12">
       <div className="relative overflow-hidden rounded-[2rem] border border-white/10 bg-white/[0.045] p-6 shadow-2xl shadow-indigo-950/30 backdrop-blur-md sm:p-10 lg:p-14">
         <div className="pointer-events-none absolute -right-20 -top-24 h-80 w-80 rounded-full bg-amber-400/15 blur-3xl" />
         <div className="pointer-events-none absolute -bottom-40 left-1/3 h-72 w-72 rounded-full bg-violet-500/15 blur-3xl" />
