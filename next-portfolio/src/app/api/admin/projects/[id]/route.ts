@@ -8,6 +8,7 @@ export async function DELETE(_: Request, { params }: { params: Promise<{ id: str
   const id = await objectId((await params).id);
   if (!id) return NextResponse.json({ error: "Invalid id" }, { status: 400 });
   await (await getMongoClient()).db(process.env.MONGODB_DB || "portfolio").collection("projects").deleteOne({ _id: id });
+  await import("next/cache").then(m => m.revalidatePath("/"));
   return NextResponse.json({ ok: true });
 }
 
@@ -24,5 +25,6 @@ export async function PUT(req: Request, { params }: { params: Promise<{ id: stri
     { $set: body }
   );
   
+  await import("next/cache").then(m => m.revalidatePath("/"));
   return NextResponse.json({ ok: true });
 }

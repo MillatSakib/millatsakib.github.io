@@ -61,8 +61,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${spaceGrotesk.variable} ${sora.variable} h-full`}>
-      <body className="min-h-full font-sans antialiased">
+    <html lang="en" className={`${spaceGrotesk.variable} ${sora.variable} h-full`} suppressHydrationWarning>
+      <body className="min-h-full font-sans antialiased" suppressHydrationWarning>
         {children}
         <ToastContainer
           position="top-right"
