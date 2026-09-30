@@ -33,7 +33,9 @@ export type SkillIconKey =
   | "mongodb"
   | "git"
   | "github"
-  | "gitlab";
+  | "gitlab"
+  | "upload"
+  | "custom";
 
 export type SkillTone = "success" | "info" | "warning" | "danger";
 
@@ -41,11 +43,12 @@ export interface SkillItem {
   name: string;
   level: number;
   iconKey: SkillIconKey;
+  iconUrl?: string;
   tone?: SkillTone;
 }
 
 export interface SkillCategory {
-  id: "web" | "tools";
+  id: string;
   label: string;
   items: SkillItem[];
 }
@@ -63,6 +66,7 @@ export interface Project {
   imageAlt: string;
   techStack: string[];
   links: ProjectLink[];
+  position?: number;
 }
 
 export type ContactIconKey = "mail" | "whatsapp" | "messenger" | "telegram";
@@ -134,7 +138,7 @@ export const portfolioData: PortfolioData = {
     statusLabel: "Programmer",
     resumeUrl:
       "https://raw.githubusercontent.com/MillatSakib/my-cv/7159ca905d4afda37a4fa61b7a319fafeeffd068/Md_Sohan_Millat_Sakib.pdf",
-    email: "millatsakib01@gmail.com",
+    email: "me@millatsakib.com",
   },
   about: {
     title: "About Me",
@@ -274,9 +278,9 @@ export const portfolioData: PortfolioData = {
   ],
   contactMethods: [
     {
-      platform: "Gmail",
-      value: "millatsakib.01@gmail.com",
-      href: "mailto:millatsakib.01@gmail.com",
+      platform: "Email",
+      value: "me@millatsakib.com",
+      href: "mailto:me@millatsakib.com",
       iconKey: "mail",
     },
     {
@@ -299,10 +303,10 @@ export const portfolioData: PortfolioData = {
     },
   ],
   contactForm: {
-    recipientEmail: "millatsakib01@gmail.com",
+    recipientEmail: "me@millatsakib.com",
     autoresponse: "Hey, Thank you for messaging me. I will reply as soon as possible",
     nextUrl: "https://millatsakib.github.io",
-    copyRecipients: ["millatsakib7@gmail.com", "millatsakib03@gmail.com"],
+    copyRecipients: [],
     subject: "New message sent from your portfolio",
     template: "table",
   },

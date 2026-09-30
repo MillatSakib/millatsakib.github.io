@@ -17,8 +17,8 @@ function ProjectLinkIcon({ type }: { type: ProjectLink["type"] }) {
 
 export default function ProjectCard({ project }: ProjectCardProps) {
   return (
-    <article className="group flex h-full flex-col overflow-hidden rounded-2xl border border-slate-700/70 bg-slate-900/70 shadow-[0_16px_50px_-28px_rgba(15,23,42,0.95)] backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:border-emerald-300/45 hover:shadow-[0_22px_55px_-25px_rgba(15,23,42,1)]">
-      <div className="relative aspect-[16/9] w-full overflow-hidden bg-[#324f77]">
+    <article className="group flex h-full flex-col overflow-hidden rounded-3xl border border-white/10 bg-white/[0.045] shadow-[0_16px_50px_-28px_rgba(15,23,42,0.95)] backdrop-blur-sm transition-all duration-300 hover:-translate-y-2 hover:border-amber-200/45 hover:shadow-[0_24px_55px_-25px_rgba(247,185,85,0.18)]">
+      <div className="relative aspect-[16/9] w-full overflow-hidden bg-[#171f38]">
         <Image
           src={project.imageSrc}
           alt={project.imageAlt}
@@ -29,7 +29,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
       </div>
 
       <div className="flex h-full flex-col p-6">
-        <h3 className="font-display text-3xl font-semibold text-white">{project.title}</h3>
+        <h3 className="font-display text-2xl font-semibold text-white sm:text-3xl">{project.title}</h3>
         <p className="mt-3 flex-1 text-sm leading-7 text-slate-300">{project.description}</p>
 
         <div className="mt-5 flex flex-wrap items-center gap-3 border-t border-slate-700/70 pt-5">
@@ -52,7 +52,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
           {project.techStack.map((item) => (
             <span
               key={`${project.title}-${item}`}
-              className="rounded-full border border-emerald-300/25 bg-emerald-400/8 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.12em] text-emerald-200"
+              className="rounded-full border border-amber-200/20 bg-amber-200/8 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.12em] text-amber-100"
             >
               {item}
             </span>

@@ -1,6 +1,7 @@
 "use client";
 
 import { FormEvent, useState } from "react";
+import { toast } from "react-toastify";
 import {
   FaEnvelope,
   FaFacebookMessenger,
@@ -8,11 +9,10 @@ import {
   FaWhatsapp,
 } from "react-icons/fa";
 import SectionHeading from "@/components/ui/SectionHeading";
-import type { ContactFormConfig, ContactIconKey, ContactMethod } from "@/models/portfolioModel";
+import type { ContactIconKey, ContactMethod } from "@/models/portfolioModel";
 
 interface ContactSectionProps {
   contactMethods: ContactMethod[];
-  contactForm: ContactFormConfig;
 }
 
 type SubmitStatus = "idle" | "submitting" | "success" | "error";
@@ -33,9 +33,8 @@ function ContactMethodIcon({ iconKey }: { iconKey: ContactIconKey }) {
   return <FaTelegramPlane className="text-[1.75rem]" />;
 }
 
-export default function ContactSection({ contactMethods, contactForm }: ContactSectionProps) {
+export default function ContactSection({ contactMethods }: ContactSectionProps) {
   const [submitStatus, setSubmitStatus] = useState<SubmitStatus>("idle");
-  const [statusMessage, setStatusMessage] = useState("");
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -45,40 +44,33 @@ export default function ContactSection({ contactMethods, contactForm }: ContactS
   const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     setSubmitStatus("submitting");
-    setStatusMessage("");
 
     try {
-      const payload = new FormData();
-      payload.append("name", formData.name);
-      payload.append("email", formData.email);
-      payload.append("message", formData.message);
-      payload.append("_autoresponse", contactForm.autoresponse);
-      payload.append("_next", contactForm.nextUrl);
-      payload.append("_cc", contactForm.copyRecipients.join(","));
-      payload.append("_captcha", "false");
-      payload.append("_subject", contactForm.subject);
-      payload.append("_template", contactForm.template);
-
-      const response = await fetch(`https://formsubmit.co/ajax/${contactForm.recipientEmail}`, {
+      const response = await fetch('/api/contact', {
         method: "POST",
         headers: {
+          "Content-Type": "application/json",
           Accept: "application/json",
         },
-        body: payload,
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          message: formData.message,
+        }),
       });
 
-      const result = (await response.json()) as { success?: string | boolean };
+      const result = await response.json();
 
-      if (!response.ok || (result.success !== true && result.success !== "true")) {
-        throw new Error("Unable to send message");
+      if (!response.ok || !result.success) {
+        throw new Error(result.error || "Unable to send message");
       }
 
       setSubmitStatus("success");
-      setStatusMessage("Message sent successfully!");
       setFormData({ name: "", email: "", message: "" });
-    } catch {
+      toast.success("Message sent successfully! I’ll get back to you soon.");
+    } catch (error) {
       setSubmitStatus("error");
-      setStatusMessage("Failed to send message. Please try again.");
+      toast.error(error instanceof Error ? error.message : "Failed to send message. Please try again.");
     }
   };
 
@@ -99,31 +91,19 @@ export default function ContactSection({ contactMethods, contactForm }: ContactS
                 href={method.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group rounded-2xl border border-slate-700/70 bg-sky-600/80 p-5 text-white shadow-[0_14px_38px_-25px_rgba(14,116,144,0.95)] transition-all duration-300 hover:-translate-y-1 hover:bg-sky-500"
+                className="group rounded-2xl border border-white/10 bg-white/[0.06] p-5 text-white shadow-[0_14px_38px_-25px_rgba(14,116,144,0.95)] transition-all duration-300 hover:-translate-y-1 hover:border-amber-200/40 hover:bg-white/[0.1]"
               >
-                <div className="inline-flex h-12 w-12 items-center justify-center rounded-xl bg-sky-900/35 text-white transition group-hover:bg-sky-900/50">
+                <div className="inline-flex h-12 w-12 items-center justify-center rounded-xl bg-amber-200/10 text-amber-200 transition group-hover:bg-amber-200/20">
                   <ContactMethodIcon iconKey={method.iconKey} />
                 </div>
-                <p className="mt-4 text-sm uppercase tracking-[0.14em] text-sky-100">{method.platform}</p>
+                <p className="mt-4 text-sm uppercase tracking-[0.14em] text-slate-400">{method.platform}</p>
                 <p className="mt-1 break-all text-sm font-semibold text-white">{method.value}</p>
               </a>
             ))}
           </div>
         </div>
 
-        <div className="rounded-2xl border border-slate-700/70 bg-slate-900/65 p-6 shadow-[0_18px_45px_-30px_rgba(15,23,42,1)] backdrop-blur-sm sm:p-7">
-          {statusMessage ? (
-            <div
-              className={`mb-4 rounded-lg px-4 py-3 text-sm font-semibold ${
-                submitStatus === "success"
-                  ? "border border-emerald-300/40 bg-emerald-300/10 text-emerald-200"
-                  : "border border-rose-300/40 bg-rose-300/10 text-rose-200"
-              }`}
-            >
-              {statusMessage}
-            </div>
-          ) : null}
-
+        <div className="rounded-3xl border border-white/10 bg-white/[0.045] p-6 shadow-[0_18px_45px_-30px_rgba(15,23,42,1)] backdrop-blur-sm sm:p-7">
           <h3 className="font-display text-2xl font-semibold text-white underline decoration-emerald-400 decoration-2 underline-offset-6">
             Send Message
           </h3>
@@ -142,7 +122,7 @@ export default function ContactSection({ contactMethods, contactForm }: ContactS
                   setFormData((previous) => ({ ...previous, name: event.target.value }))
                 }
                 required
-                className="w-full rounded-lg border border-yellow-300/80 bg-slate-950/65 px-4 py-3 text-slate-100 outline-none transition-colors focus:border-emerald-400"
+                className="w-full rounded-xl border border-white/10 bg-slate-950/45 px-4 py-3 text-slate-100 outline-none transition-colors focus:border-amber-300"
                 placeholder="Your name"
               />
             </div>
@@ -160,7 +140,7 @@ export default function ContactSection({ contactMethods, contactForm }: ContactS
                   setFormData((previous) => ({ ...previous, email: event.target.value }))
                 }
                 required
-                className="w-full rounded-lg border border-yellow-300/80 bg-slate-950/65 px-4 py-3 text-slate-100 outline-none transition-colors focus:border-emerald-400"
+                className="w-full rounded-xl border border-white/10 bg-slate-950/45 px-4 py-3 text-slate-100 outline-none transition-colors focus:border-amber-300"
                 placeholder="name@example.com"
               />
             </div>
@@ -178,7 +158,7 @@ export default function ContactSection({ contactMethods, contactForm }: ContactS
                 }
                 rows={4}
                 required
-                className="w-full resize-y rounded-lg border border-yellow-300/80 bg-slate-950/65 px-4 py-3 text-slate-100 outline-none transition-colors focus:border-emerald-400"
+                className="w-full resize-y rounded-xl border border-white/10 bg-slate-950/45 px-4 py-3 text-slate-100 outline-none transition-colors focus:border-amber-300"
                 placeholder="Write your message here..."
               />
             </div>
@@ -186,7 +166,7 @@ export default function ContactSection({ contactMethods, contactForm }: ContactS
             <button
               type="submit"
               disabled={submitStatus === "submitting"}
-              className="inline-flex items-center rounded-lg bg-blue-600 px-6 py-3 text-sm font-semibold uppercase tracking-[0.14em] text-white transition-colors hover:bg-blue-500 disabled:cursor-not-allowed disabled:bg-blue-400/70"
+              className="inline-flex items-center rounded-xl bg-amber-300 px-6 py-3 text-sm font-semibold uppercase tracking-[0.14em] text-slate-950 transition-colors hover:bg-amber-200 disabled:cursor-not-allowed disabled:bg-amber-200/70"
             >
               {submitStatus === "submitting" ? "Sending..." : "Send Message"}
             </button>

@@ -1,9 +1,9 @@
 @import "tailwindcss";
 
 :root {
-  --page-start: #1c2738;
-  --page-end: #121a26;
-  --selection-color: #7b36f4;
+  --page-start: #0b1020;
+  --page-end: #070b16;
+  --selection-color: #f7b955;
   --selection-text: #f8fafc;
 }
 
@@ -22,10 +22,12 @@ html {
 body {
   margin: 0;
   color: #f8fafc;
+  overflow-x: hidden;
   background:
-    radial-gradient(circle at 20% 12%, rgba(45, 212, 191, 0.12), transparent 34%),
-    radial-gradient(circle at 84% 28%, rgba(99, 102, 241, 0.14), transparent 40%),
+    radial-gradient(circle at 8% 4%, rgba(247, 185, 85, 0.11), transparent 28%),
+    radial-gradient(circle at 88% 18%, rgba(104, 91, 255, 0.17), transparent 35%),
     linear-gradient(145deg, var(--page-start), var(--page-end));
+  background-attachment: fixed;
 }
 
 ::selection {
@@ -54,6 +56,12 @@ body {
   .font-display {
     font-family: var(--font-sora), sans-serif;
   }
+
+  .noise-bg {
+    background-image: linear-gradient(rgba(255,255,255,.035) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.035) 1px, transparent 1px);
+    background-size: 42px 42px;
+    mask-image: linear-gradient(to bottom, black, transparent 80%);
+  }
 }
 
 .neon-btn {
@@ -61,11 +69,11 @@ body {
   display: inline-flex;
   align-items: center;
   overflow: hidden;
-  border-radius: 0.5rem;
-  border: 1px solid rgba(38, 255, 49, 0.45);
-  background-color: rgba(95, 255, 130, 0.12);
-  padding: 0.72rem 1rem;
-  color: #26ff31;
+  border-radius: 0.8rem;
+  border: 1px solid rgba(247, 185, 85, 0.5);
+  background-color: rgba(247, 185, 85, 0.1);
+  padding: 0.78rem 1.1rem;
+  color: #f7c66f;
   text-decoration: none;
   text-transform: uppercase;
   font-weight: 700;
@@ -84,12 +92,12 @@ body {
 }
 
 .neon-btn:hover {
-  background-color: #26ff31;
-  color: #0a1220;
+  background-color: #f7b955;
+  color: #17111b;
   box-shadow:
-    0 0 5px #26ff31,
-    0 0 16px #26ff31,
-    0 0 28px rgba(38, 255, 49, 0.8);
+    0 0 5px #f7b955,
+    0 0 16px #f7b955,
+    0 0 28px rgba(247, 185, 85, 0.45);
 }
 
 .neon-btn .neon-border {

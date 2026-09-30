@@ -39,7 +39,7 @@ export default function Navbar({ brandName, logoSrc, links }: NavbarProps) {
         isVisible ? "translate-y-0" : "-translate-y-full"
       }`}
     >
-      <nav className="mx-auto mt-3 w-[min(1120px,calc(100%-1rem))] rounded-2xl border border-emerald-300/20 bg-slate-950/90 px-4 py-3 shadow-[0_18px_40px_-24px_rgba(2,6,23,1)] backdrop-blur-md sm:px-5">
+      <nav className="mx-auto mt-3 w-[min(1120px,calc(100%-1rem))] rounded-2xl border border-white/10 bg-[#0b1020]/85 px-4 py-3 shadow-[0_18px_40px_-24px_rgba(2,6,23,1)] backdrop-blur-xl sm:px-5">
         <div className="flex items-center justify-between gap-3">
           <a href="#" className="inline-flex items-center gap-3">
             <Image src={logoSrc} alt={`${brandName} logo`} width={34} height={34} priority />
@@ -79,8 +79,8 @@ export default function Navbar({ brandName, logoSrc, links }: NavbarProps) {
                 "rounded-lg px-3 py-2 text-xs font-semibold uppercase tracking-[0.18em] transition-colors";
               const className =
                 link.variant === "button"
-                  ? `${baseClassName} border border-emerald-400 text-emerald-300 hover:bg-emerald-400 hover:text-slate-950`
-                  : `${baseClassName} text-slate-200 hover:text-emerald-300`;
+                  ? `${baseClassName} border border-amber-300/70 text-amber-200 hover:bg-amber-300 hover:text-slate-950`
+                  : `${baseClassName} text-slate-300 hover:text-amber-200`;
 
               return (
                 <a

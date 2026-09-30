@@ -15,13 +15,13 @@ export default function AboutSection({ about }: AboutSectionProps) {
 
       <div className="grid items-center gap-8 lg:grid-cols-[minmax(220px,380px)_1fr]">
         <div className="group mx-auto max-w-[340px]">
-          <div className="overflow-hidden rounded-2xl border border-slate-700/70 bg-slate-900/70 p-3">
+        <div className="overflow-hidden rounded-3xl border border-white/10 bg-white/[0.045] p-3 shadow-xl shadow-violet-950/20">
             <Image
               src={about.imageSrc}
               alt={about.imageAlt}
               width={600}
               height={600}
-              className="h-auto w-full rounded-xl object-cover grayscale transition duration-700 group-hover:scale-105 group-hover:grayscale-0"
+              className="h-auto w-full rounded-2xl object-cover grayscale transition duration-700 group-hover:scale-105 group-hover:grayscale-0"
               sizes="(max-width: 768px) 70vw, 340px"
             />
           </div>
