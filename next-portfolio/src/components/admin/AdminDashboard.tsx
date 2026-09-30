@@ -2,7 +2,7 @@
 import { useEffect, useState } from "react";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 
-type Category={_id:string;id:string;label:string};
+type Category={_id:string;id:string;label:string;position?:number;items?:any[]};
 type Content={categories:Category[]; projects:any[]; profileImage:string|null; aboutText:string|null; cvUrl:string|null};
 const input="w-full rounded-xl border border-white/10 bg-slate-950/60 px-4 py-3 text-slate-100 outline-none focus:border-amber-300";
 async function call(url:string, options?:RequestInit){
